@@ -14,7 +14,7 @@ const IndexPage = ( {data} ) => {
     const {Image, Title, DHA, EPA, ServingSize, CapsulesPerContainer, iherb_link, iherb_price} = node
     return (
       <tr>
-        <td><img src={`${Image.publicURL}`} style={{width: '150px'}}/></td>
+        <td><img src={`${Image.publicURL}`} style={{width: '200px'}}/></td>
         <td>{Title}</td>
         <td>{DHA}</td>
         <td>{EPA}</td>
