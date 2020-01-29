@@ -1,0 +1,46 @@
+{
+  "connection": "default",
+  "collectionName": "oils",
+  "info": {
+    "name": "Oil"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "DHA": {
+      "type": "decimal"
+    },
+    "EPA": {
+      "type": "decimal"
+    },
+    "ServingSize": {
+      "type": "decimal"
+    },
+    "CapsulesPerContainer": {
+      "type": "integer"
+    },
+    "iherb_link": {
+      "type": "string"
+    },
+    "iherb_price": {
+      "type": "decimal"
+    },
+    "amazon_link": {
+      "type": "string"
+    },
+    "amazon_price": {
+      "type": "decimal"
+    }
+  }
+}
