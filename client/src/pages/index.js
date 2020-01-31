@@ -26,6 +26,8 @@ export default class IndexPage extends React.Component{
       
       const daysPerBottle = Math.floor(CapsulesPerContainer / capsulesPerDay)
       const costPerDay  = (iherb_price / daysPerBottle).toFixed(2)
+
+
       return (
         <tr key={id}>
           <td><img src={`${Image.publicURL}`} style={{width: '250px'}}/></td>
@@ -35,27 +37,30 @@ export default class IndexPage extends React.Component{
             </h3>
             <div className="columns">
               <div className="column">
-                <p>
-                  {CapsulesPerContainer} capsules.<br/>
-                  {ServingSize} capsules per serving.
-                </p>
+                <p>{CapsulesPerContainer} capsules</p>
+                <p>{ServingSize} capsules per serving.</p>
               </div>
               <div className="column">
                 <p>
-                  {DHA} DHA<br/>
-                  {EPA} EPA
+                  {DHA} DHA</p>
+                  <p>{EPA} EPA
                 </p>    
               </div>
+              <div className="column">
+                <p><strong>{capsulesPerDay}</strong> capsules a day</p>
+                <p>{daysPerBottle} days worth</p>
+              </div>
             </div>
-            
           </td>
-          <td className="is-vcentered">{capsulesPerDay}</td>
-          <td>{daysPerBottle}</td>
+          
           <td>
+            <p>
             <a href={iherb_link} className="button is-link is-large is-light" target="_blank" rel="noopener noreferrer">
-              ${costPerDay} / Day <br/>
-              ${iherb_price.toFixed(2)}
+              ${costPerDay}  <span class="is-size-7" style={{marginLeft: '5px'}}> per day</span>
             </a>
+            </p>
+            
+            <p class="is-size-6">${iherb_price.toFixed(2)} per bottle</p>
           </td>
           <td>
             <a href={iherb_link} className="button is-link is-light" target="_blank" rel="noopener noreferrer">
@@ -136,17 +141,11 @@ export default class IndexPage extends React.Component{
         </section>
         <div className="container">
         
-          <form>
-
-
-          </form>
           <table className="table is-hoverable">
             <thead>
               <tr>
                 <td></td>
                 <td></td>
-                <td>Daily Capusles</td>
-                <td>Days</td>
                 <td>iHerb</td>
                 <td>Amazon</td>
               </tr>
