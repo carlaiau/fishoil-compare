@@ -28,20 +28,28 @@ export default class IndexPage extends React.Component{
       const costPerDay  = (iherb_price / daysPerBottle).toFixed(2)
       return (
         <tr key={id}>
-          <td><img src={`${Image.publicURL}`} style={{width: '200px'}}/></td>
+          <td><img src={`${Image.publicURL}`} style={{width: '250px'}}/></td>
           <td>
             <h3 className="is-size-4">
               {Title}
             </h3>
-            <p>
-              {CapsulesPerContainer} capsules<br/>
-              {ServingSize} capsules per serving.
-            </p>
+            <div className="columns">
+              <div className="column">
+                <p>
+                  {CapsulesPerContainer} capsules.<br/>
+                  {ServingSize} capsules per serving.
+                </p>
+              </div>
+              <div className="column">
+                <p>
+                  {DHA} DHA<br/>
+                  {EPA} EPA
+                </p>    
+              </div>
+            </div>
+            
           </td>
-          <td>{DHA}</td>
-          <td>{EPA}</td>
-          
-          <td>{capsulesPerDay}</td>
+          <td className="is-vcentered">{capsulesPerDay}</td>
           <td>{daysPerBottle}</td>
           <td>
             <a href={iherb_link} className="button is-link is-large is-light" target="_blank" rel="noopener noreferrer">
@@ -132,17 +140,13 @@ export default class IndexPage extends React.Component{
 
 
           </form>
-          <table className="table">
+          <table className="table is-hoverable">
             <thead>
               <tr>
                 <td></td>
-                <td>Title</td>
-                <td>DHA</td>
-                <td>EPA</td>
-                
-
-                <td>Capsules Required to Reach</td>
-                <td>Days per Bottle</td>
+                <td></td>
+                <td>Daily Capusles</td>
+                <td>Days</td>
                 <td>iHerb</td>
                 <td>Amazon</td>
               </tr>
