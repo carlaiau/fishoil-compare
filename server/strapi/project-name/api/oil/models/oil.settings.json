@@ -41,6 +41,18 @@
     },
     "amazon_price": {
       "type": "decimal"
+    },
+    "iherb_reviews": {
+      "type": "decimal"
+    },
+    "iherb_avg_rating": {
+      "type": "decimal"
+    },
+    "amazon_reviews": {
+      "type": "decimal"
+    },
+    "amazon_avg_rating": {
+      "type": "decimal"
     }
   }
 }

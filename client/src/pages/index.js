@@ -12,69 +12,109 @@ export default class IndexPage extends React.Component{
 		this.state = {
       oils: props.data.oils,
       daily_dosage: 2000,
-      type: 'DHA'
-      
+      type: 'DHA',
+      sortProperty: 'costPerDay'
 		}
 	}
 
   render(){
-    const {oils, daily_dosage, type} = this.state 
-    const rows = oils.edges.map( ({node}) => {
-      const {id, Image, Title, DHA, EPA, ServingSize, CapsulesPerContainer, iherb_link, iherb_price} = node
-
+    const {oils, daily_dosage, type, sortProperty} = this.state
+    
+    let oilArray = []
+    oils.edges.map( ({node}) => {
+      const {DHA, EPA, ServingSize, CapsulesPerContainer, iherb_price} = node
       const capsulesPerDay = Math.ceil(daily_dosage / (type === 'DHA' ? DHA : (type === 'EPA' ? EPA : DHA + EPA ) ) * ServingSize)
-      
       const daysPerBottle = Math.floor(CapsulesPerContainer / capsulesPerDay)
-      const costPerDay  = (iherb_price / daysPerBottle).toFixed(2)
 
+      node.capsulesPerDay = capsulesPerDay
+      node.daysPerBottle = daysPerBottle
+      node.costPerDay = (iherb_price / daysPerBottle).toFixed(2)
+      oilArray.push(node)
+    })
+    
+    // sort by the desired sort function
+    oilArray.sort((a, b) => (a[sortProperty] > b[sortProperty]) ? 1 : -1)
+    
 
+    const rows = oilArray.map( ({id, Image, Title, DHA, EPA, ServingSize, CapsulesPerContainer, iherb_link, iherb_price, iherb_reviews, iherb_avg_rating, capsulesPerDay, daysPerBottle, costPerDay }, index) => {
+      iherb_link += "?rcode=NVR078"
+      let boxClass = "media box";
+      switch(index){
+        case 0:
+          boxClass += ' gold';
+          break;
+        case 1:
+          boxClass += ' silver';
+          break;
+        case 2:
+          boxClass += ' bronze';
+          break;
+      }
+      
       return (
-        <tr key={id}>
-          <td><img src={`${Image.publicURL}`} style={{width: '250px'}}/></td>
-          <td>
-            <h3 className="is-size-4">
-              {Title}
-            </h3>
-            <div className="columns">
-              <div className="column">
-                <p>{CapsulesPerContainer} capsules</p>
-                <p>{ServingSize} capsules per serving.</p>
-              </div>
-              <div className="column">
-                <p>
-                  {DHA} DHA</p>
-                  <p>{EPA} EPA
-                </p>    
-              </div>
-              <div className="column">
-                <p><strong>{capsulesPerDay}</strong> capsules a day</p>
-                <p>{daysPerBottle} days worth</p>
+        <a href={iherb_link} target="_blank" rel="noopener noreferrer" className="bigLink">
+          <article className={boxClass} key={id}>
+            <div className="media-left" >
+              <figure className="image is-128x128">
+                <img src={`${Image.publicURL}`} style={{width: '250px'}}/>
+              </figure>
+            </div>
+            <div className="media-content">
+              <h3 className="is-size-4">
+                {Title}
+              </h3>
+              <div className="columns is-vcentered">
+
+                <div className="column is-four-fifths">
+                  
+                  <div className="columns">
+                    <div className="column">
+                      <p>
+                        Each Capsule contains<br/>
+                        <strong>
+                          {DHA / ServingSize}mg DHA & {EPA / ServingSize}mg EPA
+                        </strong>
+                      </p>
+                    </div>
+                    <div className="column">
+                      <p className="is-size-6">
+                        ${iherb_price.toFixed(2)} Per container.<br/>
+                        {CapsulesPerContainer} capsules</p>
+                                      
+                    </div>
+                    <div className="column">
+                      <p className="is-size-6">
+                        <strong>{capsulesPerDay} capsules a day</strong><br/>
+                        Container lasts {daysPerBottle} days
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="column">
+                  <p>
+                    <a href={iherb_link} className="button is-link is-large is-primary" target="_blank" rel="noopener noreferrer">
+                      ${costPerDay}  <span className="is-size-7" style={{marginLeft: '5px'}}> per day</span>
+                    </a><br/>
+
+                    <span className="is-size-7">
+                      {iherb_reviews} reviews with {iherb_avg_rating}/5 score
+                    </span>  
+                  </p>
+                  
+                </div>  
               </div>
             </div>
-          </td>
-          
-          <td>
-            <p>
-            <a href={iherb_link} className="button is-link is-large is-light" target="_blank" rel="noopener noreferrer">
-              ${costPerDay}  <span class="is-size-7" style={{marginLeft: '5px'}}> per day</span>
-            </a>
-            </p>
-            
-            <p class="is-size-6">${iherb_price.toFixed(2)} per bottle</p>
-          </td>
-          <td>
-            <a href={iherb_link} className="button is-link is-light" target="_blank" rel="noopener noreferrer">
-              ${iherb_price.toFixed(2)}
-            </a>
-          </td>
-        </tr>
+          </article>
+        </a>
       )
     });
+
 
     return (
       <Layout>
         <SEO title="Home" />
-        <section className="hero is-medium is-info">
+        <section className="hero is-info">
           <div className="hero-body">
             <div className="container">
               <div className="columns">
@@ -83,9 +123,9 @@ export default class IndexPage extends React.Component{
                     Fish Oil
                   </h1>
                   <h2 className="subtitle"> 
-                    Compare
+                    Comparison Alpha 0.1
                   </h2>
-                  <p>Calculations rely on purchasing the largest container size.</p>
+                  <p>Calculations rely on purchasing the largest container size from iherb in USD</p>
                 </div>
                 <div className="column">
                   <div className="columns">
@@ -116,7 +156,6 @@ export default class IndexPage extends React.Component{
                             <option value="20000">20,000mg</option>
                           </select>
                         </div>
-                        <p className="help">Total Daily Dosage (1000mg = 1g)</p>
                       </div>
                     </div>
                     <div className="column field">
@@ -129,7 +168,18 @@ export default class IndexPage extends React.Component{
                             <option value="EPA">EPA</option>
                           </select>
                         </div>
-                        <p className="help">Your type of daily requirement</p>
+                      </div>
+                    </div>
+                    <div className="column field">
+                      <label className="label has-text-white">Sort By</label>
+                      <div className="control">
+                        <div className="select">
+                          <select value={sortProperty} onChange={e => this.setState({sortProperty: e.target.value})}>
+                            <option value="costPerDay">Cheapest Daily Cost</option>
+                            <option value="capsulesPerDay">Least Daily Capsules</option>
+                            <option value="iherb_price">Cheapest Container</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
                     
@@ -139,21 +189,10 @@ export default class IndexPage extends React.Component{
             </div>
           </div>
         </section>
-        <div className="container">
-        
-          <table className="table is-hoverable">
-            <thead>
-              <tr>
-                <td></td>
-                <td></td>
-                <td>iHerb</td>
-                <td>Amazon</td>
-              </tr>
-            </thead>
-            <tbody>
-              {rows}
-            </tbody>
-          </table>
+        <div style={{padding: '20px 0'}}>
+          <div className="container">    
+            {rows}
+          </div>
         </div>
       </Layout>
     )
@@ -169,6 +208,8 @@ export const query = graphql`
           Title
           iherb_link
           iherb_price
+          iherb_reviews
+          iherb_avg_rating
           ServingSize
           DHA
           EPA

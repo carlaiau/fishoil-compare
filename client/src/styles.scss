@@ -5,3 +5,77 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
+
+p, label, select{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.box{
+    .button{
+        transition: 0.5s;
+        font-weight: 700;
+    }
+    &.gold{
+        border: 6px solid rgba(11, 232, 129,1.0);
+        .button{
+            background: rgba(11, 232, 129,0.8);
+            &:hover{
+                background: rgba(11, 232, 129,1)
+            }
+        }
+    }
+}
+.box{
+    margin-bottom: 20px;
+    border: 6px solid rgba(245, 59, 87,1.0);
+    .button{
+        background: rgba(245, 59, 87,.8);
+        &:hover{
+            background: rgba(245, 59, 87,1.0)
+        }
+    }
+    &.silver{
+        border: 6px solid rgba(255, 168, 1,1.0);
+        .button{
+            background: rgba(255, 168, 1,0.8);
+            &:hover{
+                background: rgba(255, 168, 1,1.0);
+            }
+        }
+    }
+}
+
+@media screen  and (max-width:960px){
+    .hero{
+        .container{
+            width: auto;
+        }
+        .column{
+            margin-bottom: 0;
+            padding: 0 0.75em 0.25rem;
+        }
+    }
+    .container{
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media screen  and (max-width:480px){
+    html{
+        font-size: 90%;
+    }
+    .media-left{
+        display: none;
+    }
+    .box{
+        .media-content{
+            overflow-x: visible;
+        }
+        .column{
+        }
+        p{
+            margin: 0;
+        }
+    }
+}
