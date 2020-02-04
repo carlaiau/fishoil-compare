@@ -30,7 +30,8 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://028469cb.ngrok.io`,
+        //apiURL: `http://028469cb.ngrok.io`,
+        apiURL: `http://da512e6c.ngrok.io`,
         queryLimit: 1000, // Default to 100
         contentTypes: [`oil`]
       },

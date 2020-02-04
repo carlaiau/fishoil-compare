@@ -10,38 +10,92 @@ p, label, select{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.box{
-    .button{
-        transition: 0.5s;
-        font-weight: 700;
+.hero{
+    .column.bubble{
+        background: rgba(256,256,256,0.2);
+        border-radius: 6px;
+        padding: 10px;
     }
-    &.gold{
-        border: 6px solid rgba(11, 232, 129,1.0);
-        .button{
-            background: rgba(11, 232, 129,0.8);
-            &:hover{
-                background: rgba(11, 232, 129,1)
-            }
-        }
+    a{
+        color: #fff;
+        text-decoration: underline;
     }
 }
 .box{
     margin-bottom: 20px;
     border: 6px solid rgba(245, 59, 87,1.0);
+    img{
+        width: 200px;
+    }
     .button{
+        transition: 0.5s;
+        font-weight: 700;
         background: rgba(245, 59, 87,.8);
+        color: #fff;
         &:hover{
-            background: rgba(245, 59, 87,1.0)
+            background: rgba(245, 59, 87,1.0);
+            color: #fff;
+        }
+    }
+    a{
+        color:rgba(245, 59, 87,.8);
+        &:hover{
+            color: rgba(245, 59, 87,1.0)
+        }
+    }
+    &.gold{
+        border: 6px solid rgba(11, 232, 129,1.0);
+        .button{
+            color: #fff;
+            background: rgba(11, 232, 129,0.8);
+            &:hover{
+                background: rgba(11, 232, 129,1);
+                color: #fff;
+            }
+        }
+        a{
+            color:rgba(11, 232, 129,0.8);
+            &:hover{
+                color: rgba(11, 232, 129, 1);
+            }
         }
     }
     &.silver{
         border: 6px solid rgba(255, 168, 1,1.0);
         .button{
+            color: #fff;
             background: rgba(255, 168, 1,0.8);
             &:hover{
                 background: rgba(255, 168, 1,1.0);
+                color: #fff;
             }
         }
+        a{
+            color:rgba(255, 168, 1,0.8);
+            &:hover{
+                color: rgba(255, 168, 1,1.0);
+            }
+        }
+    
+    }
+}
+.sorter{
+    padding: 10px 20px;
+    border-radius: 6px;
+    background: #eee;
+    margin-top: 20px;
+    .level{
+        .field-label{
+            @media screen and (min-width: 769px){
+                flex-grow: 2;
+            }
+            .type{
+                @media screen and (min-width: 960px){
+                    margin-left: 10px;
+                }
+            }
+        }
+        
     }
 }
 
@@ -50,14 +104,14 @@ p, label, select{
         .container{
             width: auto;
         }
-        .column{
-            margin-bottom: 0;
-            padding: 0 0.75em 0.25rem;
-        }
+
     }
     .container{
         width: 90%;
         margin: 0 auto;
+    }
+    .sorter{
+        margin-top: 20px;
     }
 }
 
@@ -69,6 +123,9 @@ p, label, select{
         display: none;
     }
     .box{
+        img{
+            width: 100%;
+        }
         .media-content{
             overflow-x: visible;
         }
