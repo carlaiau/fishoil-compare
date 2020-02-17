@@ -50,6 +50,36 @@
     },
     "image": {
       "type": "string"
+    },
+    "DHA_caps_per_day": {
+      "type": "integer"
+    },
+    "EPA_caps_per_day": {
+      "type": "integer"
+    },
+    "COMBINED_caps_per_day": {
+      "type": "integer"
+    },
+    "DHA_days_per_bottle": {
+      "type": "integer"
+    },
+    "EPA_days_per_bottle": {
+      "type": "integer"
+    },
+    "COMBINED_days_per_bottle": {
+      "type": "integer"
+    },
+    "DHA_price_per_day": {
+      "type": "float"
+    },
+    "EPA_price_per_day": {
+      "type": "float"
+    },
+    "COMBINED_price_per_day": {
+      "type": "float"
+    },
+    "hide": {
+      "type": "boolean"
     }
   }
 }

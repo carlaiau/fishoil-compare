@@ -13,16 +13,18 @@ export default class IndexPage extends React.Component{
       oils: props.data.oils,
       daily_dosage: 2000,
       type: 'DHA',
-      sortProperty: 'costPerDay'
+      sortProperty: 'costPerDay',
+      minReviews: 0,
+      minRating: 0,
 		}
 	}
 
   render(){
-    const {oils, daily_dosage, type, sortProperty} = this.state
+    const {oils, daily_dosage, type, sortProperty, minReviews, minRating} = this.state
     
     let oilArray = []
     oils.edges.map( ({node}) => {
-      const {DHA, EPA, ServingSize, CapsulesPerContainer, iherb_price} = node
+      const {DHA, EPA, ServingSize, CapsulesPerContainer, iherb_price, iherb_reviews, iherb_avg_rating} = node
       const capsulesPerDay = Math.ceil(daily_dosage / (type === 'DHA' ? DHA : (type === 'EPA' ? EPA : DHA + EPA ) ) * ServingSize)
       const daysPerBottle = Math.floor(CapsulesPerContainer / capsulesPerDay)
 
@@ -32,7 +34,11 @@ export default class IndexPage extends React.Component{
       node.DHAPerCap = DHA / ServingSize
       node.EPAPerCap = EPA / ServingSize
 
-      oilArray.push(node)
+      let eh_oh = false
+      if(minReviews && iherb_reviews < minReviews || minRating && iherb_avg_rating < minRating) eh_oh = true        
+      
+      if(!eh_oh) oilArray.push(node)
+      return node
     })
     
     // sort by the desired sort function
@@ -42,8 +48,9 @@ export default class IndexPage extends React.Component{
       oilArray.sort((a, b) => (a[sortProperty] < b[sortProperty]) ? 1 : -1)
     }
     
+    
 
-    const rows = oilArray.map( ({id, Image, Title, DHA, EPA, ServingSize, CapsulesPerContainer, iherb_link, iherb_price, iherb_reviews, iherb_avg_rating, capsulesPerDay, daysPerBottle, costPerDay }, index) => {
+    const rows = oilArray.slice(0, 50).map( ({id, image, Title, DHA, EPA, ServingSize, CapsulesPerContainer, iherb_link, iherb_price, iherb_reviews, iherb_avg_rating, capsulesPerDay, daysPerBottle, costPerDay }, index) => {
       iherb_link += "?rcode=NVR078"
       let boxClass = "box";
       switch(index){
@@ -64,7 +71,7 @@ export default class IndexPage extends React.Component{
           <div className="column">
             <figure className="">
               <a href={iherb_link} target="_blank" rel="noopener noreferrer">
-                <img src={`${Image.publicURL}`}/>
+                <img src={`${image}`}/>
               </a>
             </figure>
           </div>
@@ -79,14 +86,15 @@ export default class IndexPage extends React.Component{
                 <p>
                   Each Capsule contains<br/>
                   <strong>
-                    {DHA / ServingSize}mg DHA & {EPA / ServingSize}mg EPA
+                    {(DHA / ServingSize).toFixed(0)}mg DHA & {(EPA / ServingSize).toFixed(0)}mg EPA
                   </strong>
                 </p>
               </div>
               <div className="column">
                 <p className="is-size-6">
                   <strong>${iherb_price.toFixed(2)} Per container</strong><br/>
-                  {CapsulesPerContainer} capsules</p>
+                  {CapsulesPerContainer} capsules
+                </p>
                                 
               </div>
               <div className="column">
@@ -127,7 +135,7 @@ export default class IndexPage extends React.Component{
                   <h2 className="subtitle">
                     Comparison Alpha 0.1
                   </h2>
-                  <p>This is a work in progress.<br/>All Feedback appreciated!<br/>
+                  <p>Work in progress. Feedback or suggestions appreciated!<br/>
                   <a class="home" href="https://carlaiau.com" target="_blank" rel="noopener noreferrer">carlaiau.com</a>
                   </p>
                 </div>
@@ -137,7 +145,7 @@ export default class IndexPage extends React.Component{
                     It is best suited for people who have already determined their desired daily dosage of Omega 3.
                     All Prices are aggregated from iherb daily and based in USD.</p>
                   <p>Links for further information: <a href="https://en.wikipedia.org/wiki/Docosahexaenoic_acid" target="_blank" rel="noopener noreferrer">DHA</a>, <a href="https://en.wikipedia.org/wiki/Eicosapentaenoic_acid" target="_blank" rel="noopener noreferrer">EPA</a> and 
-                  a recent deep dive into the topic on Peter Attia's <a href="https://peterattiamd.com/billharris/" target="_blank" rel="noopener noreferrer">Podcast</a>. We have no affiliation, merely fans.
+                  a recent deep dive into the topic on Peter Attia's <a href="https://peterattiamd.com/billharris/" target="_blank" rel="noopener noreferrer">Podcast</a>. We have no affiliation with Peter although we are fans of the show!
                   </p>
 
                 </div>
@@ -211,6 +219,49 @@ export default class IndexPage extends React.Component{
                 <div className="level-item has-text-centered">
                   <div className="field is-horizontal">
                     <div className="field-label is-normal">
+                      <label className="label">Reviews</label>
+                    </div>
+                    <div className="field-body">
+                      <div className="field">
+                        <div className="control">
+                          <div className="select is-rounded">
+                            <select value={minReviews} onChange={e => this.setState({minReviews: e.target.value})}>
+                              <option value="0">0+</option>
+                              <option value="100">100+</option>
+                              <option value="250">250+</option>
+                              <option value="500">500+</option>
+                              <option value="1000">1,000+</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="level-item has-text-centered">
+                  <div className="field is-horizontal">
+                    <div className="field-label is-normal">
+                      <label className="label">Rating</label>
+                    </div>
+                    <div className="field-body">
+                      <div className="field">
+                        <div className="control">
+                          <div className="select is-rounded">
+                            <select value={minRating} onChange={e => this.setState({minRating: e.target.value})}>
+                              <option value="0">0+</option>
+                              <option value="2.5">2.5+</option>
+                              <option value="4">4+</option>
+                              <option value="4.5">4.5+</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="level-item has-text-centered">
+                  <div className="field is-horizontal">
+                    <div className="field-label is-normal">
                       <label className="label">Sort By</label>
                     </div>
                     <div className="field-body">
@@ -246,7 +297,7 @@ export default class IndexPage extends React.Component{
 
 export const query = graphql`
   query {
-    oils: allStrapiOil {
+    oils: allStrapiOil (sort: {fields: DHA_price_per_day, order: ASC}, filter: {hide: {ne: true}}) {
       edges {
         node {
           id
@@ -259,9 +310,7 @@ export const query = graphql`
           DHA
           EPA
           CapsulesPerContainer
-          Image {
-            publicURL
-          }
+          image
         }
       }
     }

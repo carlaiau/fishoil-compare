@@ -27,6 +27,7 @@ p, label, select{
     img{
         width: 200px;
     }
+    
     .button{
         transition: 0.5s;
         font-weight: 700;
@@ -77,6 +78,25 @@ p, label, select{
             }
         }
     
+    }
+
+    @media screen and (max-width: 768px){    
+        .columns{
+            .column{
+                &:first-of-type{
+                    display: none;
+                }
+            }
+            p{
+                margin-bottom: 0;
+                text-align: center;
+            }
+        }
+    }
+    @media screen and (max-width: 480px){    
+        .is-size-4{
+            font-size: 1.25rem !important;
+        }
     }
 }
 .sorter{

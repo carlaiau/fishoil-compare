@@ -18,6 +18,10 @@ class QuotesSpider(scrapy.Spider):
             yield scrapy.Request(url=link, callback=self.scrape_products)
     
     def scrape_products(self, response):
+
+        rating = ""
+        reviews = ""
+
         name = response.css('#product-summary-header h1::text').get()
         if "oz" in name or "ackets" in name or "ummies" in name or "ml" in name or "hots" in name: # Dump the bottles
             return
@@ -29,6 +33,11 @@ class QuotesSpider(scrapy.Spider):
         serving_size = supplements_table.xpath('//td//strong[contains(text(), "Serving Size")]/parent::*').get()
         if serving_size != None:
             serving_size = serving_size.split("</strong>")[1]
+        
+        rating_string = response.css('#product-summary-header .rating .stars::attr(title)').get()
+        if rating_string != None:
+            rating = rating_string.split("/")[0]
+            reviews = rating_string.split(" - ")[1].split(" ")[0]
         
         name_array = name.split(",")
         capsules_per_container = name_array[len(name_array) - 1]
@@ -62,5 +71,7 @@ class QuotesSpider(scrapy.Spider):
             'capsules_per_container': capsules_per_container,
             'serving_size': serving_size,
             'epa': epa,
-            'dha': dha
+            'dha': dha,
+            'rating': rating,
+            'reviews': reviews
         }
