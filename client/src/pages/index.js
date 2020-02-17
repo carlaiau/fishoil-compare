@@ -143,7 +143,7 @@ export default class IndexPage extends React.Component{
                   <p>Fish oil omega 3 concentration varies significantly between products. 
                     This tool guides you to make a more informed purchase.
                     It is best suited for people who have already determined their desired daily dosage of Omega 3.
-                    All Prices are aggregated from iherb daily and based in USD.</p>
+                    All Prices are aggregated from iherb daily and based in New Zealand Dollars.</p>
                   <p>Links for further information: <a href="https://en.wikipedia.org/wiki/Docosahexaenoic_acid" target="_blank" rel="noopener noreferrer">DHA</a>, <a href="https://en.wikipedia.org/wiki/Eicosapentaenoic_acid" target="_blank" rel="noopener noreferrer">EPA</a> and 
                   a recent deep dive into the topic on Peter Attia's <a href="https://peterattiamd.com/billharris/" target="_blank" rel="noopener noreferrer">Podcast</a>. We have no affiliation with Peter although we are fans of the show!
                   </p>
