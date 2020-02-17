@@ -1,0 +1,314 @@
+[
+    {
+        "name": "Now Foods, Omega-3, Molecularly Distilled, 180 Softgels",
+        "capsules_per_container": "180",
+        "url": "https://nz.iherb.com/pr/Now-Foods-Omega-3-Molecularly-Distilled-180-Softgels/724",
+        "dha": "120",
+        "serving_size": "1",
+        "epa": "180"
+    },
+    {
+        "name": "Natural Factors, Rx Omega-3 Factors, EPA 400 mg/DHA 200 mg, 240 Softgels",
+        "capsules_per_container": "240",
+        "url": "https://nz.iherb.com/pr/Natural-Factors-Rx-Omega-3-Factors-EPA-400-mg-DHA-200-mg-240-Softgels/4251",
+        "dha": "200",
+        "serving_size": "1",
+        "epa": "400"
+    },
+    {
+        "name": "Solgar, Omega-3, EPA & DHA, Triple Strength, 950 mg, 100 Softgels",
+        "capsules_per_container": "100",
+        "url": "https://nz.iherb.com/pr/Solgar-Omega-3-EPA-DHA-Triple-Strength-950-mg-100-Softgels/26738",
+        "dha": "378",
+        "serving_size": "1",
+        "epa": "504"
+    },
+    {
+        "name": "Doctor's Best, Purified & Clear Omega 3 Fish Oil with Goldenomega, 1000 mg, 120 Marine Softgels",
+        "capsules_per_container": "120",
+        "url": "https://nz.iherb.com/pr/Doctor-s-Best-Purified-Clear-Omega-3-Fish-Oil-with-Goldenomega-1000-mg-120-Marine-Softgels/81884",
+        "dha": "400",
+        "serving_size": "2",
+        "epa": "800"
+    },
+    {
+        "name": "Solgar, Omega-3, EPA & DHA, Double Strength, 700 mg, 120 Softgels",
+        "capsules_per_container": "120",
+        "url": "https://nz.iherb.com/pr/Solgar-Omega-3-EPA-DHA-Double-Strength-700-mg-120-Softgels/14106",
+        "dha": "240",
+        "serving_size": "1",
+        "epa": "360"
+    },
+    {
+        "name": "Nordic Naturals, Omega-3, Lemon, 1,000 mg, 60 Soft Gels",
+        "capsules_per_container": "60",
+        "url": "https://nz.iherb.com/pr/Nordic-Naturals-Omega-3-Lemon-1-000-mg-60-Soft-Gels/7052",
+        "dha": "220",
+        "serving_size": "2",
+        "epa": "330"
+    },
+    {
+        "name": "Life Extension, Omega Foundations, Super Omega-3, 120 Softgels",
+        "capsules_per_container": "120",
+        "url": "https://nz.iherb.com/pr/Life-Extension-Omega-Foundations-Super-Omega-3-120-Softgels/67018",
+        "dha": "500",
+        "serving_size": "2",
+        "epa": "700"
+    },
+    {
+        "name": "Nordic Naturals, Omega Woman, With Evening Primrose Oil, 830 mg, 120 Soft Gels",
+        "capsules_per_container": "120",
+        "url": "https://nz.iherb.com/pr/Nordic-Naturals-Omega-Woman-With-Evening-Primrose-Oil-830-mg-120-Soft-Gels/4298",
+        "dha": "160",
+        "serving_size": "2",
+        "epa": "240"
+    },
+    {
+        "name": "Now Foods, Eco-Sustain Omega-3, 180 Softgels",
+        "capsules_per_container": "180",
+        "url": "https://nz.iherb.com/pr/Now-Foods-Eco-Sustain-Omega-3-180-Softgels/327",
+        "dha": "240",
+        "serving_size": "2",
+        "epa": "360"
+    },
+    {
+        "name": "Now Foods, Ultra Omega 3-D, 90 Fish Softgels",
+        "capsules_per_container": "90",
+        "url": "https://nz.iherb.com/pr/Now-Foods-Ultra-Omega-3-D-90-Fish-Softgels/91619",
+        "dha": "300",
+        "serving_size": "1",
+        "epa": "600"
+    },
+    {
+        "name": "Jarrow Formulas, EPA-DHA Balance, 240 Softgels",
+        "capsules_per_container": "240",
+        "url": "https://nz.iherb.com/pr/Jarrow-Formulas/7929",
+        "dha": "200",
+        "serving_size": "1",
+        "epa": "400"
+    },
+    {
+        "name": "Now Foods, Tri-3D Omega, 330 EPA/220 DHA, 90 Softgels",
+        "capsules_per_container": "90",
+        "url": "https://nz.iherb.com/pr/Now-Foods-Tri-3D-Omega-330-EPA-220-DHA-90-Softgels/39952",
+        "dha": "220",
+        "serving_size": "1",
+        "epa": "330"
+    },
+    {
+        "name": "Now Foods, Molecularly Distilled Omega-3, 180 EPA/120 DHA, 200 Fish Softgels",
+        "capsules_per_container": "200",
+        "url": "https://nz.iherb.com/pr/Now-Foods-Molecularly-Distilled-Omega-3-180-EPA-120-DHA-200-Fish-Softgels/96435",
+        "dha": "240",
+        "serving_size": "2",
+        "epa": "360"
+    },
+    {
+        "name": "Life Extension, Omega Foundations, Super Omega-3, 240 Softgels",
+        "capsules_per_container": "240",
+        "url": "https://nz.iherb.com/pr/Life-Extension-Omega-Foundations-Super-Omega-3-240-Softgels/67021",
+        "dha": "500",
+        "serving_size": "4",
+        "epa": "700"
+    },
+    {
+        "name": "Nordic Naturals, Ultimate Omega, Lemon, 1,000 mg, 60 Soft Gels",
+        "capsules_per_container": "60",
+        "url": "https://nz.iherb.com/pr/Nordic-Naturals-Ultimate-Omega-Lemon-1-000-mg-60-Soft-Gels/43655",
+        "dha": "450",
+        "serving_size": "2",
+        "epa": "650"
+    },
+    {
+        "name": "Solgar, Omega-3 Fish Oil Concentrate, 120 Softgels",
+        "capsules_per_container": "120",
+        "url": "https://nz.iherb.com/pr/Solgar-Omega-3-Fish-Oil-Concentrate-120-Softgels/22426",
+        "dha": "200",
+        "serving_size": "2",
+        "epa": "320"
+    },
+    {
+        "name": "Nordic Naturals, Ultimate Omega, Lemon, 1,280 mg, 180 Soft Gels",
+        "capsules_per_container": "180",
+        "url": "https://nz.iherb.com/pr/Nordic-Naturals-Ultimate-Omega-Lemon-1-280-mg-180-Soft-Gels/12949",
+        "dha": "450",
+        "serving_size": "2",
+        "epa": "650"
+    },
+    {
+        "name": "Life Extension, Omega Foundations, Mega EPA/DHA, 120 Softgels",
+        "capsules_per_container": "120",
+        "url": "https://nz.iherb.com/pr/Life-Extension-Omega-Foundations-Mega-EPA-DHA-120-Softgels/68440",
+        "dha": "480",
+        "serving_size": "2",
+        "epa": "720"
+    },
+    {
+        "name": "Now Foods, Omega-3, Molecularly Distilled, 30 Softgels",
+        "capsules_per_container": "30",
+        "url": "https://nz.iherb.com/pr/Now-Foods-Omega-3-Molecularly-Distilled-30-Softgels/78091",
+        "dha": "240",
+        "serving_size": "2",
+        "epa": "360"
+    },
+    {
+        "name": "Sports Research, Omega-3 Fish Oil, Triple Strength, 1250 mg, 30 Softgels",
+        "capsules_per_container": "30",
+        "url": "https://nz.iherb.com/pr/Sports-Research/84979",
+        "dha": "250",
+        "serving_size": "1",
+        "epa": "687"
+    },
+    {
+        "name": "Carlson Labs, Wild Caught, Super Omega-3 Gems, 1,200 mg, 100 + 30 Soft Gels",
+        "capsules_per_container": "100",
+        "url": "https://nz.iherb.com/pr/Carlson-Labs-Wild-Caught-Super-Omega-3-Gems-1-200-mg-100-30-Soft-Gels/2799",
+        "dha": "400",
+        "serving_size": "2",
+        "epa": "600"
+    },
+    {
+        "name": "Natrol, Omega-3 Fish Oil, Natural Lemon Flavor, 1,000 mg, 150 Softgels",
+        "capsules_per_container": "150",
+        "url": "https://nz.iherb.com/pr/Natrol/2242",
+        "dha": "120",
+        "serving_size": "1",
+        "epa": "180"
+    },
+    {
+        "name": "Carlson Labs, Wild Caught, Elite Omega-3 Gems, Natural Lemon Flavor, 1,600 mg, 90 + 30 Free Soft Gels",
+        "capsules_per_container": "90",
+        "url": "https://nz.iherb.com/pr/Carlson-Labs-Wild-Caught-Elite-Omega-3-Gems-Natural-Lemon-Flavor-1-600-mg-90-30-Free-Soft-Gels/67747",
+        "dha": "600",
+        "serving_size": "2",
+        "epa": "800"
+    },
+    {
+        "name": "Now Foods, Super Omega EPA, Molecularly Distilled, 240 Softgels",
+        "capsules_per_container": "240",
+        "url": "https://nz.iherb.com/pr/Now-Foods-Super-Omega-EPA-Molecularly-Distilled-240-Softgels/8305",
+        "dha": "480",
+        "serving_size": "2",
+        "epa": "720"
+    },
+    {
+        "name": "Now Foods, Ultra Omega 3-D, 180 Fish Softgels",
+        "capsules_per_container": "180",
+        "url": "https://nz.iherb.com/pr/Now-Foods-Ultra-Omega-3-D-600-EPA-300-DHA-180-Softgels/68700",
+        "dha": "300",
+        "serving_size": "1",
+        "epa": "600"
+    },
+    {
+        "name": "Sports Research, Omega-3 Fish Oil, Triple Strength, 1250 mg, 180 Softgels",
+        "capsules_per_container": "180",
+        "url": "https://nz.iherb.com/pr/Sports-Research/72037",
+        "dha": "250",
+        "serving_size": "1",
+        "epa": "687"
+    },
+    {
+        "name": "Now Foods, Omega-3 Mini Gels, 180 Softgels",
+        "capsules_per_container": "180",
+        "url": "https://nz.iherb.com/pr/Now-Foods-Omega-3-Mini-Gels-180-Softgels/23362",
+        "dha": "240",
+        "serving_size": "2",
+        "epa": "360"
+    },
+    {
+        "name": "Now Foods, Omega-3, 180 EPA/120 DHA, 500 Softgels",
+        "capsules_per_container": "500",
+        "url": "https://nz.iherb.com/pr/Now-Foods-Omega-3-180-EPA-120-DHA-500-Softgels/18104",
+        "dha": "240",
+        "serving_size": "2",
+        "epa": "360"
+    },
+    {
+        "name": "Now Foods, Omega-3, 180 EPA/120 DHA, 200 Softgels",
+        "capsules_per_container": "200",
+        "url": "https://nz.iherb.com/pr/Now-Foods-Omega-3-180-EPA-120-DHA-200-Softgels/323",
+        "dha": "240",
+        "serving_size": "2",
+        "epa": "360"
+    },
+    {
+        "name": "Sports Research, Antarctic Krill Oil with Astaxanthin, 1,000 mg, 60 Softgels",
+        "capsules_per_container": "60",
+        "url": "https://nz.iherb.com/pr/Sports-Research/71100",
+        "dha": "60",
+        "serving_size": "1",
+        "epa": "136"
+    },
+    {
+        "name": "California Gold Nutrition, Omega 800 by Madre Labs, Pharmaceutical Grade Fish Oil, 80% EPA/DHA, Triglyceride Form, 1000 mg, 30 Fish Gelatin Softgels",
+        "capsules_per_container": "30",
+        "url": "https://nz.iherb.com/pr/California-Gold-Nutrition-Omega-800-by-Madre-Labs-Pharmaceutical-Grade-Fish-Oil-80-EPA-DHA-Triglyceride-Form-1000-mg-30-Fish-Gelatin-Softgels/82845",
+        "dha": "320",
+        "serving_size": "1",
+        "epa": "480"
+    },
+    {
+        "name": "Now Foods, Ultra Omega-3, 500 EPA/250 DHA, 90 Softgels",
+        "capsules_per_container": "90",
+        "url": "https://nz.iherb.com/pr/Now-Foods-Ultra-Omega-3-500-EPA-250-DHA-90-Softgels/76073",
+        "dha": "250",
+        "serving_size": "1",
+        "epa": "500"
+    },
+    {
+        "name": "California Gold Nutrition, Omega 800 by Madre Labs, Pharmaceutical Grade Fish Oil, 80% EPA/DHA, Triglyceride Form, 1000 mg, 90 Fish Gelatin Softgels",
+        "capsules_per_container": "90",
+        "url": "https://nz.iherb.com/pr/California-Gold-Nutrition-Omega-800-by-Madre-Labs-Pharmaceutical-Grade-Fish-Oil-80-EPA-DHA-Triglyceride-Form-1000-mg-90-Fish-Gelatin-Softgels/85180",
+        "dha": "320",
+        "serving_size": "1",
+        "epa": "480"
+    },
+    {
+        "name": "Now Foods, Ultra Omega-3, 500 EPA/250 DHA, 180 Softgels",
+        "capsules_per_container": "180",
+        "url": "https://nz.iherb.com/pr/Now-Foods-Ultra-Omega-3-500-EPA-250-DHA-180-Softgels/8341",
+        "dha": "250",
+        "serving_size": "1",
+        "epa": "500"
+    },
+    {
+        "name": "California Gold Nutrition, Omega-3, Premium Fish Oil, 240 Fish Gelatin Softgels",
+        "capsules_per_container": "240",
+        "url": "https://nz.iherb.com/pr/California-Gold-Nutrition-Omega-3-Premium-Fish-Oil-240-Fish-Gelatin-Softgels/86598",
+        "dha": "240",
+        "serving_size": "2",
+        "epa": "360"
+    },
+    {
+        "name": "California Gold Nutrition, Omega-3, Premium Fish Oil, 100 Fish Gelatin Softgels",
+        "capsules_per_container": "100",
+        "url": "https://nz.iherb.com/pr/California-Gold-Nutrition-Omega-3-Premium-Fish-Oil-100-Fish-Gelatin-Softgels/62118",
+        "dha": "240",
+        "serving_size": "2",
+        "epa": "360"
+    },
+    {
+        "name": "Solgar, Omega-3, EPA & DHA, Triple Strength, 950 mg, 50 Softgels",
+        "capsules_per_container": "50",
+        "url": "https://nz.iherb.com/pr/Solgar-Omega-3-EPA-DHA-Triple-Strength-950-mg-50-Softgels/14918",
+        "dha": "378",
+        "serving_size": "1",
+        "epa": "504"
+    },
+    {
+        "name": "Solgar, Omega-3 Fish Oil Concentrate, 240 Softgels",
+        "capsules_per_container": "240",
+        "url": "https://nz.iherb.com/pr/Solgar-Omega-3-Fish-Oil-Concentrate-240-Softgels/23555",
+        "dha": "200",
+        "serving_size": "2",
+        "epa": "320"
+    },
+    {
+        "name": "Natural Factors, WomenSense, RxOmega-3, 120 Enteripure Softgels",
+        "capsules_per_container": "120",
+        "url": "https://nz.iherb.com/pr/Natural-Factors-WomenSense-RxOmega-3-120-Enteripure-Softgels/2647",
+        "dha": "200",
+        "serving_size": "2",
+        "epa": "400"
+    }
+]
