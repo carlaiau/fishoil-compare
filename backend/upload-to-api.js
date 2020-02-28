@@ -2,7 +2,7 @@ const axios = require('axios');
 const fs = require("fs");
 
 
-fs.readFile('final.json', 'utf8', (err, data) => {
+fs.readFile(process.argv[2], 'utf8', (err, data) => {
     if (err) throw err;
     
     const oils = JSON.parse(data)
